@@ -120,7 +120,7 @@ void USART1_Config(void) {
    RCC->APB2ENR |= 1 << 2;  
    GPIOA->CRH &= ~((0x0F) << (4 * (9 - 8))); 
    GPIOA->CRH |= (0x0B << (4 * (9 - 8)));  
-   // Set baud rate 9600
+   // Set baud rate 115200
    USART1->BRR = 72000000 /115200; 
    USART1->CR1 |= (1 << 13) | (1 << 3) | (1 << 2);
 }
